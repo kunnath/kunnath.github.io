@@ -2,13 +2,16 @@
 const nextConfig = {
   images: {
     unoptimized: true,
-    domains: ['vercel.app']
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**',
+      },
+    ]
   },
   eslint: {
     ignoreDuringBuilds: true,
-  },
-  trailingSlash: true,
-  swcMinify: true,
+  }
 };
 
 module.exports = nextConfig;
