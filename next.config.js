@@ -1,15 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   images: {
     unoptimized: true,
+    domains: ['vercel.app']
   },
   eslint: {
     ignoreDuringBuilds: true,
   },
-  basePath: '',
   trailingSlash: true,
-  assetPrefix: '/',
+  swcMinify: true,
 };
 
 module.exports = nextConfig;
